@@ -1,7 +1,7 @@
 <template>
   <nav>
     <div id="kyu-logo">
-      <h1>Desáfio</h1>
+      <h1>Desafio</h1>
     </div>
 
     <div class="nav-menu" :class="{ 'active': showingMenu }">
