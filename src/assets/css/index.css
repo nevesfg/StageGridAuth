@@ -90,6 +90,6 @@
 
   @media (max-width: 920px) {
     .img-human img {
-      visibility: hidden;
+      display: none;
     }
   }

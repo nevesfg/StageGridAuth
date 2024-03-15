@@ -66,6 +66,7 @@
     justify-content: center;
     align-items: center;
   }
+  
 
   .testebtn{
     color: var(--bg-input) !important;
@@ -128,6 +129,21 @@
       box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
     }
   }
+
+@media (max-width: 520px){
+  .card-container {
+      position: relative;
+      padding: 25px 6px 0px;
+      text-align: justify;
+      background-color: rgba(255, 255, 255, 0.19);
+      width: 49vh;
+      border-radius: 22px;
+      border: 2px solid #183852;
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+  }
+}
 </style>
 
 <!-- CODIGO PADRÃO DE CRIAÇÃO DO PROJETO -->

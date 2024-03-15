@@ -28,28 +28,7 @@
       <div></div>
     </div>
   </nav>
-  <!-- <main>
 
-    <div class="component-container">
-      <h1>Olá, primeiramente, {{ saudacao }}! ^-^</h1>
-      <div class="card-container floating">
-        <p>Vamos para uma breve apresentação, me chamo Victor Neves e sou desenvolvedor Front-end há 3 anos.</p>
-        <p>Esta é só mais uma das minhas paradas para "estudo"! 🫢</p>
-        <p>Bom, este é um sistema de cadastro de usuários com visualização em GRID, além de diversas outras funcionalidades, como:
-          <ul>
-            <li><mark>Solicitações assíncronas ao Backend.</mark></li>
-            <li><mark>Autenticação e validação dos dados e token do usuário.</mark></li>
-            <li><mark>Uma função simples de busca no banco para pesquisar usuários.</mark></li>
-          </ul>
-        </p>
-        <p>Lembrando, este é um projeto de estudo simples do framework.</p>
-        <br>
-        <br>
-        <p>Vamoooos testar???</p>
-        <router-link class="style-input" to="/register">Registra-se</router-link>
-      </div>
-    </div>
-  </main> -->
   <router-view/>
 </template>
 
@@ -102,9 +81,10 @@ const logout = () => {
 
 <style scoped>
 nav {
+  /* position: relative; */
   width: 100%;
   height: 50px;
-  padding: 10px 50px;
+  padding: 10px 20px;
 
   display: flex;
   flex-direction: row;

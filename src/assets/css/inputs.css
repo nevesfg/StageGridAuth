@@ -104,14 +104,11 @@ div.style-input-container {
 
 /* DARK/LIGHT */
 .switch__container {
-    /* 
-    margin: 15px;
-    margin-right: 1%;
-   */
+
     right: 0;
     margin: 0 auto;
     margin-right: 10px;
-    position: fixed;
+    position: absolute;
 }
 
 .switch {
@@ -179,9 +176,8 @@ div.style-input-container {
         right: 0;
         /* margin: 15px; */
         margin: 0 auto;
-        margin-right: 90px;
+        margin-right: 70px;
         /* margin-right: 22%; */
-        position: fixed;
 
     }
 

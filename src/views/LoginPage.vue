@@ -105,6 +105,17 @@ const handleLogin = async () => {
   align-items: center;
   height: 100vh;
 }
+
+@media (max-width: 520){
+  .register-container{
+    width: 100%;
+      display: grid;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+  }
+}
 .card-container {
   position: relative;
   padding: 50px 150px 0px;
