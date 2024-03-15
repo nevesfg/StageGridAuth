@@ -1,0 +1,122 @@
+/** END: Non Openmrs CSS **/
+input {
+    background-color: #b4babe;
+}
+
+div.style-input-container {
+    margin-bottom: 1.5rem;
+    position: relative;
+    width: 15rem;
+}
+  
+/* Input*/
+.style-input > input {
+    border: none;
+    border-bottom: 0.125rem solid var(--style-color-contrast);
+    width: 100%;
+    height: 2rem;
+    font-size: 1.0625rem;
+    padding-left: 0.875rem;
+    line-height: 147.6%;
+    padding-top: 0.825rem;
+    padding-bottom: 0.5rem;
+    border-radius: 20px;
+    background-color: transparent !important;
+}
+
+.style-input > button {
+    color: var(--white);
+    border: 2px solid var(--style-color-contrast);
+    width: 100%;
+    height: 2rem;
+    font-size: 1.0625rem;
+    line-height: 147.6%;
+    padding-top: 3px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: var(--bg-input);
+}
+
+.style-input > button:hover {
+    background-color: var(--bg-btt);
+}
+
+.style-input > input:focus {
+    outline: none;
+}
+
+.style-input > .style-input-label {
+    position: absolute;
+    top: 4px;
+    left: 0.875rem;
+    line-height: 147.6%;
+    color: var(--style-color-contrast);
+    transition: top .2s;
+}
+
+
+.img-eye > img {
+    width: 22px;
+    position: absolute;
+    top: 6px;
+    right: 7px;
+    cursor: pointer;
+}
+
+
+.style-input > .omrs-input-helper {
+    font-size: 0.9375rem;
+    color: var(--style-color-contrast);
+    letter-spacing: 0.0275rem;
+    margin: 0.125rem 0.875rem;
+}
+
+
+/* .style-input > input:hover {
+    background: var(--omrs-color-interaction-minus-two);
+    border-color: var(--omrs-color-ink-high-contrast);
+} */
+
+.style-input:not(.omrs-input-danger) > input:hover + .style-input-label {
+    color: var(--bg-input-focus-hover);
+}
+.style-input:not(.omrs-input-danger) > input:hover {
+    border-color: var(--bg-input-focus-hover);
+}
+
+.style-input > input:focus + .style-input-label,
+.style-input > input:valid + .style-input-label {
+    top: -10px;
+    font-size: 0.9375rem;
+    margin-bottom: 32px;;
+}
+
+
+.style-input > input:focus + .style-input-label {
+    color: var(--bg-input-focus-hover);
+}
+
+
+.style-input > input:focus {
+    border-color: var(--bg-input-focus-hover);
+}
+
+
+/** DANGER **/
+
+/* .style-input.omrs-input-danger > .style-input-label, .style-input.omrs-input-danger > .omrs-input-helper{
+    color: var(--omrs-color-danger);
+}
+
+.omrs-input-danger > svg {
+    fill: var(--omrs-color-danger);
+}
+
+.omrs-input-danger > input {
+    border-color: var(--omrs-color-danger);
+}
+
+
+.style-input > input {
+    background: var(--bg-input);
+} */

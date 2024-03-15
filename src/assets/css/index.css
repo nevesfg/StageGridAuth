@@ -1,0 +1,78 @@
+:root {
+    --darkgrey: #2a2c30;
+    --blurple: #5865f2;
+    --green: #57f287;
+    --green-secondary: ##77de54;
+    --yellow: #fee75c;
+    --fuchsia: #eb459e;
+    --red: #ed4245;
+    --white: #ffffff;
+    --black: #000000;
+    --cinza: #b4babe;
+    --bg-input: #183852;
+    --bg-input-focus-hover: #0d6efd;
+    --bg-btt: #2a5b83;
+
+    --azul-escuro: #0d2540;
+
+
+
+    --style-color-contrast: rgba(19, 19, 21, 0.6);
+    
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+  }
+  
+  input,
+  button,
+  a {
+    outline: none;
+  }
+  
+  *:focus {
+    outline: none;
+    border: none;
+  }
+  
+  html,
+  body {
+    background-color: var(--cinza);
+    background-image: url("../background2.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: "Open Sans", "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: var(--black);
+  }
+  
+  ul,
+  li {
+    list-style: none;
+  }
+  
+  body {
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+  
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  
+    margin: 0 auto;
+  }
+
+  @media (max-width: 920px) {
+    .img-human img {
+      visibility: hidden;
+    }
+  }
