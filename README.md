@@ -1,4 +1,4 @@
-# Desafio Estágio - Sistema de Gerenciamento de Usuários
+# Desafio - Sistema de Gerenciamento de Usuários
 
 ### Este projeto é uma aplicação web desenvolvida como parte de um desafio de estágio. Ela permite o cadastro, a listagem em grid e a autenticação de usuários. O objetivo é demonstrar habilidades com Vue.js, incluindo o uso de componentes, roteamento com Vue Router e gerenciamento de estado com Vuex.
 
@@ -60,3 +60,5 @@ Siga as instruções específicas do seu serviço de hospedagem para deployment.
  Vue Router - Roteamento de aplicativos SPA.
  
  Django-rest-framework - Framework backend utilizado.
+
+ Estilização e responsividade feita manualmente, não utilizei framework.
