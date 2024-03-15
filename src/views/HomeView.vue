@@ -6,14 +6,13 @@
         <p>Vamos para uma breve apresentação, me chamo Victor Neves e sou desenvolvedor <span style="color: purple">Front-end</span> há 3 anos.</p>
         <p>Esta é só mais uma das minhas paradas para "estudo"! 🫢</p>
         <p>Bom, este é um sistema de cadastro de usuários com visualização em GRID, além de diversas outras funcionalidades, como:
-          <ul>
-            <li><mark>Solicitações assíncronas ao Backend.</mark></li>
-            <li><mark>Autenticação e validação dos dados e token do usuário.</mark></li>
-            <li><mark>Uma função simples de busca no banco para pesquisar usuários.</mark></li>
+          <ul style="padding:2px;color: navy; font-size: 18px; border: 1px solid navy; border-radius: 5px">
+            <li>Solicitações assíncronas ao Backend.</li>
+            <li>Autenticação e validação dos dados e token do usuário.</li>
+            <li>Uma função simples de busca no banco para pesquisar usuários.</li>
           </ul>
         </p>
         <p>Lembrando, este é um projeto de estudo simples do framework.</p>
-        <br>
         <br>
         <p style="margin-bottom: 8px">Vamoooos testar???</p>
         <router-link class="style-input" to="/register">Registra-se</router-link>
