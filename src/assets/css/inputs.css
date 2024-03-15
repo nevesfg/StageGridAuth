@@ -171,6 +171,8 @@ div.style-input-container {
     content: "\f185";
 }
 
+
+
 @media (max-width: 920px){
     .switch__container {
         right: 0;

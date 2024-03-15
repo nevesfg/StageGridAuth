@@ -1,6 +1,7 @@
 <template>
      
     <div class="register-container">
+
       <div class="img-human">
         <img src="../assets/register-icon.png" />
       </div>
@@ -41,16 +42,18 @@
 
             <div class="style-input">
               <button type="submit">Cadastrar</button>
-              <p v-if="error">{{ error }}</p>
               <p @click="goToLoginPage">Ja tem uma conta?</p>
             </div>
+            <p class="error_msg" v-if="error">{{ error }}</p>
           </form>
         </div>
+
       </div>
       <div class="img-human">
         <img src="../assets/human-icon.png" />
       </div>
     </div>
+
   </template>
   
 <script setup>
@@ -74,23 +77,53 @@
     router.push({ name: "loginPage" });
   }
 
+  const isValidPassword = (password) => {
+    if (password.length > 8) return false;
+    
+    const hasLetterAndNumber = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]/.test(password);
+    if (!hasLetterAndNumber) return false;
+    
+    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+    if (!hasSpecialChar) return false;
+    return true;
+  };
+
   const handleRegister = async () => {
     error.value = '';
+
+    if(!isValidPassword(user.value.password)){
+      error.value = 'A senha deve ter no máximo 8 caracteres, incluir letras, números e pelo menos um caractere especial.';
+      setTimeout(() => { error.value = ''; }, 2200); 
+      return;
+    }
+
     try {
       await http.post('/register/', user.value);
       alert('Cadastro realizado com sucesso!');
-      router.push({ name: 'loginPage' });
+      router.push({ name: 'dashboard' });
     } catch (e) {
       if (e.response && e.response.data) {
         error.value = Object.values(e.response.data).join(' ');
+        setTimeout(() => { error.value = ''; }, 2200); 
       } else {
         error.value = 'Ocorreu um erro ao tentar registrar. Tente novamente mais tarde.';
-      }
+        setTimeout(() => { error.value = ''; }, 2200); 
+      } 
     }
   };
 </script>
 
 <style scoped>
+.error_msg{
+    top: 150px;
+    right: 4px;
+    background: rgb(248, 132, 132);
+    color: black;
+    padding: 10px;
+    position: absolute;
+    border-radius: 10px;
+    border: 4px solid rgb(153, 4, 4);
+}
 
 .register-container {
   width: 80%;

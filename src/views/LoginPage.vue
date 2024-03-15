@@ -74,18 +74,36 @@ function goToRegisterPage() {
 // const currentComponent = computed(() => {
 //   return isGirado.value ? RegisterPage : null; // Substitua null por qualquer outro componente ou template que você queira mostrar quando não estiver girado.
 // });
+const isValidPassword = (password) => {
+  if (password.length > 8) return false;
+  
+  const hasLetterAndNumber = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]/.test(password);
+  if (!hasLetterAndNumber) return false;
+  
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+  if (!hasSpecialChar) return false;
+  return true;
+};
 
 const handleLogin = async () => {
   error.value = "";
+
+  if(!isValidPassword(credentials.value.password)){
+    error.value = 'A senha deve ter no máximo 8 caracteres, incluir letras, números e pelo menos um caractere especial.';
+    setTimeout(() => { error.value = ''; }, 2200); 
+    return;
+  }
   try {
     await store.dispatch("login", credentials.value);
     router.push({ name: "dashboard" });
   } catch (e) {
     if (e.response && e.response.data) {
       error.value = e.response.data.detail;
+      setTimeout(() => { error.value = ''; }, 2200); 
     } else {
       error.value =
         "Falha no login, por causa de erros na rede ou problemas na configuração";
+        setTimeout(() => { error.value = ''; }, 2200); 
     }
   }
   return {
