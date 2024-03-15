@@ -41,9 +41,9 @@
 
           <div class="style-input">
             <button type="submit">Login</button>
-            <p v-if="error">{{ error }}</p>
             <p @click="goToRegisterPage">Cadastre-se</p>
           </div>
+          <p class="error_msg" v-if="error">{{ error }}</p>
         </form>
       </div>
     </div>

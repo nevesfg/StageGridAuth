@@ -114,16 +114,7 @@
 </script>
 
 <style scoped>
-.error_msg{
-    top: 150px;
-    right: 4px;
-    background: rgb(248, 132, 132);
-    color: black;
-    padding: 10px;
-    position: absolute;
-    border-radius: 10px;
-    border: 4px solid rgb(153, 4, 4);
-}
+
 
 .register-container {
   width: 80%;
