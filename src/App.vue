@@ -1,11 +1,13 @@
 <template>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
   <nav>
     <div id="kyu-logo">
-      <h1>Desafio</h1>
+      <h1>Estudo VueJS</h1>
     </div>
 
     <div class="nav-menu" :class="{ 'active': showingMenu }">
       <ul>
+        <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/login">Login</router-link></li>
         <li><router-link to="/register">Registra-se</router-link></li>
         <li><router-link @click="VerifyGridUsersClick" to="/dashboard">Grid de Usuários</router-link></li>
@@ -13,12 +15,41 @@
       </ul>
     </div>
 
+    <div class="switch__container active">
+      <input id="switch-flat" class="switch switch--flat" type="checkbox" @change="trocarCorDeFundo">
+      <label for="switch-flat"></label>
+    </div>
+
+    
+
     <div id="mobile-menu-btn" @click="toggleMobileMenu">
       <div></div>
       <div></div>
       <div></div>
     </div>
   </nav>
+  <!-- <main>
+
+    <div class="component-container">
+      <h1>Olá, primeiramente, {{ saudacao }}! ^-^</h1>
+      <div class="card-container floating">
+        <p>Vamos para uma breve apresentação, me chamo Victor Neves e sou desenvolvedor Front-end há 3 anos.</p>
+        <p>Esta é só mais uma das minhas paradas para "estudo"! 🫢</p>
+        <p>Bom, este é um sistema de cadastro de usuários com visualização em GRID, além de diversas outras funcionalidades, como:
+          <ul>
+            <li><mark>Solicitações assíncronas ao Backend.</mark></li>
+            <li><mark>Autenticação e validação dos dados e token do usuário.</mark></li>
+            <li><mark>Uma função simples de busca no banco para pesquisar usuários.</mark></li>
+          </ul>
+        </p>
+        <p>Lembrando, este é um projeto de estudo simples do framework.</p>
+        <br>
+        <br>
+        <p>Vamoooos testar???</p>
+        <router-link class="style-input" to="/register">Registra-se</router-link>
+      </div>
+    </div>
+  </main> -->
   <router-view/>
 </template>
 
@@ -36,6 +67,10 @@ function toggleMobileMenu() {
   showingMenu.value = !showingMenu.value;
 }
 
+const trocarCorDeFundo = () => {
+  document.documentElement.classList.toggle("light-mode");
+};
+
 function VerifyGridUsersClick() {
   if (!isUserAuthenticated.value) {
     alert("Você precisa estar logado para acessar o Grid de Usuários.");
@@ -51,10 +86,21 @@ const logout = () => {
       logout
     };
   };
+
+  // const saudacao = computed(() => {
+  //   const horaAtual = new Date().getHours();
+    
+  //   if (horaAtual < 12) {
+  //     return "Bom dia";
+  //   } else if (horaAtual < 18) {
+  //     return "Boa tarde";
+  //   } else {
+  //     return "Boa noite";
+  //   }
+  // });
 </script>
 
-<style>
-
+<style scoped>
 nav {
   width: 100%;
   height: 50px;
@@ -65,11 +111,12 @@ nav {
   align-items: center;
   justify-content: space-between;
   background: var(--bg-input);
+  border-bottom: 1px solid var(--white);
+  box-shadow: 0px 1px 9px 0px rgba(0,0,0,0.75);
 }
 
 #kyu-logo {
   height: 35px;
-  cursor: pointer;
   margin-right: 22px;
   color: var(--white);
 }
@@ -117,7 +164,6 @@ nav a.router-link-exact-active {
   background-color: white;
   border-radius: 20px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-
 } 
 
 
@@ -210,6 +256,10 @@ nav a.router-link-exact-active {
     display: flex;
   }
 }
+
+
+
+
 
 
 /* ESTILIZAÇÃO PADRAO DO VUE */

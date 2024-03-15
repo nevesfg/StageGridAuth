@@ -1,25 +1,42 @@
 :root {
-    --darkgrey: #2a2c30;
-    --blurple: #5865f2;
-    --green: #57f287;
-    --green-secondary: ##77de54;
-    --yellow: #fee75c;
-    --fuchsia: #eb459e;
-    --red: #ed4245;
-    --white: #ffffff;
-    --black: #000000;
-    --cinza: #b4babe;
-    --bg-input: #183852;
-    --bg-input-focus-hover: #0d6efd;
-    --bg-btt: #2a5b83;
+  --darkgrey: #2a2c30;
+  --blurple: #5865f2;
+  --green: #57f287;
+  --green-secondary: ##77de54;
+  --yellow: #fee75c;
+  --fuchsia: #eb459e;
+  --red: #ed4245;
+  --white: #ffffff;
+  --black: #000000;
+  --cinza: #b4babe;
+  --bg-input: #183852;
+  --bg-input-focus-hover: #0d6efd;
+  --bg-btt: #2a5b83;
 
-    --azul-escuro: #0d2540;
+  --azul-escuro: #0d2540;
+  --style-color-contrast: rgba(19, 19, 21, 0.6);
+}
 
 
+.light-mode {
+  --darkgrey: #505357; /* Ainda mais claro para fundos e elementos sutis */
+  --blurple: #9aa2f8; /* Blurple mais suave e claro */
+  --green: #8fffc1; /* Verde mais vibrante e claro */
+  --green-secondary: #a1f77d; /* Verde secundário mais claro e vibrante */
+  --yellow: #fff9a8; /* Amarelo suave e luminoso */
+  --fuchsia: #fc8ad4; /* Fuchsia claro e suave */
+  --red: #f89797; /* Vermelho suave para uma aparência menos intensa */
+  
+  --white: #ffffff; /* Mantido, ideal para fundos e elementos principais */
+  --black: #000000; /* Cinza muito claro para textos e detalhes */
+  --cinza: #d6dde4; /* Cinza mais claro para contrastes suaves */
+  --bg-input: #5078a0; /* Input mais claro e menos saturado */
+  --bg-input-focus-hover: #6a9cfe; /* Azul claro vibrante para foco/hover */
+  --bg-btt: #6a8baa; /* Botão de fundo mais claro e suave */
 
-    --style-color-contrast: rgba(19, 19, 21, 0.6);
-    
-  }
+  --azul-escuro: #446780; /* Azul mais claro e suave para fundos e painéis */
+  --style-color-contrast: rgba(19, 19, 21, 1); /* Levemente mais claro para melhor visibilidade */
+}
   
   * {
     padding: 0;
