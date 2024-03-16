@@ -78,7 +78,7 @@
   }
 
   const isValidPassword = (password) => {
-    if (password.length > 8) return false;
+    if (password.length < 8) return false;
     
     const hasLetterAndNumber = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]/.test(password);
     if (!hasLetterAndNumber) return false;
