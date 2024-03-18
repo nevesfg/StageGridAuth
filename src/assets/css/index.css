@@ -15,6 +15,7 @@
 
   --azul-escuro: #0d2540;
   --style-color-contrast: rgba(19, 19, 21, 0.6);
+  --dark-light-bg: url('../background2.png');
 }
 
 
@@ -36,6 +37,7 @@
 
   --azul-escuro: #446780; /* Azul mais claro e suave para fundos e painéis */
   --style-color-contrast: rgba(19, 19, 21, 1); /* Levemente mais claro para melhor visibilidade */
+  --dark-light-bg: url('../background-light.png'); 
 }
   
   * {
@@ -59,7 +61,7 @@
   html,
   body {
     background-color: var(--cinza);
-    background-image: url("../background2.png");
+    background-image: var(--dark-light-bg);
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;

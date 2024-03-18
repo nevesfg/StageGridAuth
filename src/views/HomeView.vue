@@ -66,7 +66,6 @@
     justify-content: center;
     align-items: center;
   }
-  
 
   .testebtn{
     color: var(--bg-input) !important;
@@ -121,7 +120,7 @@
       padding: 50px 75px 0px;
       text-align: justify;
       background-color: rgba(255, 255, 255, 0.19);
-      width: 68vh;
+      width: 70vh;
       border-radius: 22px;
       border: 2px solid #183852;
       -webkit-backdrop-filter: blur(10px);
@@ -136,7 +135,7 @@
       padding: 25px 6px 0px;
       text-align: justify;
       background-color: rgba(255, 255, 255, 0.19);
-      width: 49vh;
+      width: 51vh;
       border-radius: 22px;
       border: 2px solid #183852;
       -webkit-backdrop-filter: blur(10px);
