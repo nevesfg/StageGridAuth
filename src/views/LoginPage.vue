@@ -89,7 +89,7 @@ const handleLogin = async () => {
   error.value = "";
 
   if(!isValidPassword(credentials.value.password)){
-    error.value = 'A senha deve ter no máximo 8 caracteres, incluir letras, números e pelo menos um caractere especial.';
+    error.value = 'A senha deve ter no minimo 8 caracteres, incluir letras, números e pelo menos um caractere especial.';
     setTimeout(() => { error.value = ''; }, 2200); 
     return;
   }
