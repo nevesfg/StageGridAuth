@@ -1,6 +1,6 @@
 # Desafio - Sistema de Gerenciamento de Usuários
 
-### Este projeto é uma aplicação web desenvolvida como parte de um desafio de estágio. Ela permite o cadastro, a listagem em grid e a autenticação de usuários. O objetivo é demonstrar habilidades com Vue.js, incluindo o uso de componentes, roteamento com Vue Router e gerenciamento de estado com Vuex.
+### Este projeto é uma aplicação web desenvolvida como parte de um desafio de estágio e estudo. Ela permite o cadastro, a listagem em grid e a autenticação de usuários. O objetivo é demonstrar habilidades com Vue.js, incluindo o uso de componentes, roteamento com Vue Router e gerenciamento de estado com Vuex.
 
 # Começando
 
