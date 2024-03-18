@@ -19,7 +19,6 @@
                 required
               />
               <span class="style-input-label">Usuário ou E-mail</span>
-              <!-- <span class="omrs-input-helper">Helper Text</span> -->
             </label>
           </div>
 
@@ -32,7 +31,6 @@
                 required
               />
               <span class="style-input-label">Senha</span>
-              <!-- <span class="omrs-input-helper">Helper Text</span> -->
               <span class="img-eye" @click="showPassword = !showPassword">
                 <img :src="showPassword ? imgeHide : imgeView" />
               </span>
@@ -71,9 +69,7 @@ const showPassword = ref(false);
 function goToRegisterPage() {
   router.push({ name: "register" });
 }
-// const currentComponent = computed(() => {
-//   return isGirado.value ? RegisterPage : null; // Substitua null por qualquer outro componente ou template que você queira mostrar quando não estiver girado.
-// });
+  
 const isValidPassword = (password) => {
   if (password.length < 8) return false;
   
@@ -146,7 +142,7 @@ const handleLogin = async () => {
   height: 355px;
   border-radius: 22px;
   border: 4px solid #183852;
-  backdrop-filter: blur(10px); /* Efeito de desfoque */
+  backdrop-filter: blur(10px);
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
 }
 
