@@ -3,19 +3,16 @@
   <div class="component-container">
       <h1>Olá, primeiramente, {{ saudacao }}! ^-^</h1>
       <div class="card-container floating">
-        <p>Vamos para uma breve apresentação, me chamo Victor Neves e sou desenvolvedor <span style="color: purple">Front-end</span> há 3 anos.</p>
-        <p>Esta é só mais uma das minhas paradas para "estudo"! 🫢</p>
-        <p>Bom, este é um sistema de cadastro de usuários com visualização em GRID, além de diversas outras funcionalidades, como:
+        <p>Uma breve apresentação do projeto para o teste, me chamo Victor Neves e sou desenvolvedor <span style="color: purple">Front-end</span> há 3 anos. </p>
+        <p>Este projeto representa uma parcela do conhecimento que venho adquirindo com o tempo. Ainda estou em processo de aprendizagem do Vue.js, mas já consegui aplicar o que aprendi até agora. Com a combinação desse conhecimento e do estudo contínuo do framework, desenvolvi um sistema de cadastro de usuários com visualização em grade, além de várias outras funcionalidades como:
           <ul style="padding:2px;color: navy; font-size: 18px; border: 1px solid navy; border-radius: 5px">
             <li>Solicitações assíncronas ao Backend.</li>
             <li>Autenticação e validação dos dados e token do usuário.</li>
-            <li>Uma função simples de busca no banco para pesquisar usuários.</li>
+            <li>Consulta de usuarios ao banco de dados através da pesquisa de usuários.</li>
           </ul>
         </p>
-        <p>Lembrando, este é um projeto de estudo simples do framework.</p>
         <br>
-        <p style="margin-bottom: 8px">Vamoooos testar???</p>
-        <router-link class="style-input" to="/register">Registra-se</router-link>
+        <router-link class="style-input" to="/register">Teste o projeto</router-link>
       </div>
     </div>
 </template>
@@ -47,7 +44,7 @@
     height: 2rem;
     left: 20pp;
     margin: 28px;
-    padding: 6px 6px 4px 6px;
+    padding: 0.375rem 0.375rem 0.25rem;
     /* padding-top: 42px; */
     /* min-width: 81px; */
     font-size: 15px;
@@ -58,13 +55,15 @@
     background-color: var(--bg-input);
   }
   .component-container {
-    width: 80%;
+    max-width: 80%;
     display: flex;
-    margin: auto;
-    height: 90vh;
+    margin: 5vh auto;
+    height: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+    
   }
 
   .testebtn{
@@ -81,15 +80,16 @@
   }
   .card-container {
     position: relative;
-    padding: 50px 36px 0px;
+    padding: 1rem 2.25rem 1rem;
+    width: 70vh;
     /* display: flex; */
     justify-content: unset;
     align-items: center;
     text-align:justify;
     background-color: rgba(255, 255, 255, 0.1);
-    max-width: 463px;
-    min-width: 200px;
-    height: 500px;
+    max-width: 100%;
+    min-width: 0; 
+   /*  height: 500px; */
     border-radius: 22px;
     border: 2px solid #183852;
     -webkit-backdrop-filter: blur(10px);
@@ -116,31 +116,17 @@
 
   @media (max-width: 920px) {
     .card-container {
-      position: relative;
-      padding: 50px 75px 0px;
-      text-align: justify;
-      background-color: rgba(255, 255, 255, 0.19);
+      padding: 1rem 2.25rem 1rem;
       width: 70vh;
-      border-radius: 22px;
-      border: 2px solid #183852;
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
-      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+
+      
     }
   }
 
 @media (max-width: 520px){
   .card-container {
-      position: relative;
-      padding: 25px 6px 0px;
-      text-align: justify;
-      background-color: rgba(255, 255, 255, 0.19);
-      width: 51vh;
-      border-radius: 22px;
-      border: 2px solid #183852;
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
-      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+      padding: 1rem 2.25rem 1rem;
+      width: 70vh;
   }
 }
 </style>

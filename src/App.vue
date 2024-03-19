@@ -36,6 +36,8 @@
 import { ref, computed } from 'vue';
 import { useStore } from 'vuex';
 import { useRouter } from "vue-router";
+import { onMounted } from 'vue'
+
 
 const router = useRouter();
 const showingMenu = ref(false);
@@ -65,6 +67,11 @@ const logout = () => {
       logout
     };
   };
+
+
+onMounted(() => {
+  document.title = 'App VueJS'
+})
 
   // const saudacao = computed(() => {
   //   const horaAtual = new Date().getHours();
